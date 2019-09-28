@@ -357,11 +357,12 @@ h1 {
     margin: 0 2px 2px 0;
 }
 
-.slider {  
+.slider {      
     width: 404px;
     height: 12px;
     border-radius: 6px;    
-    -webkit-appearance: none;
+    -webkit-appearance: none; 
+    appearance: none;
     background-color:rgba(245, 197, 6, 0.28);
     outline: none;
     overflow: hidden;
@@ -370,10 +371,38 @@ h1 {
 .slider::-webkit-slider-runnable-track {
     height: 12px;
     color: #f5c506;  
+    background-color:rgba(245, 197, 6, 0.28);
     -webkit-appearance: none;      
 }
 
 .slider::-webkit-slider-thumb {
+    display: inline-block;    
+    width: 0;
+    height: 12px;  
+    -webkit-appearance: none;
+    appearance: none;           
+    box-shadow: -400px 0 0 400px #f5c506;
+    cursor: pointer; 
+}
+.slider::-webkit-progress-bar {    
+    background-color: red;
+    color: red;
+
+}
+
+
+.slider::-moz-range-progress {
+    height: 12px;
+    background-color: #f5c507; 
+}
+
+.slider::-moz-range-track {  
+    height: 12px;
+    background-color:#81712e;
+    opacity: 0.5;
+}
+
+.slider::-moz-slider-thumb {
     display: inline-block;    
     width: 0;
     height: 12px;  
@@ -382,20 +411,23 @@ h1 {
     cursor: pointer; 
 }
 
-.slider::-moz-range-progress {
-    background-color: #f5c506; 
-}
-
-.slider::-moz-range-track {  
-    background-color:#f5c506;
+.slider::-moz-range-thumb {
+    width: 0; 
+    height: 12px; 
+    background: #f5c506; 
+    border: 0;
+    cursor: pointer; 
 }
 
 .slider::-ms-fill-lower {
-    background-color: #f5c506; 
+    height: 12px;
+    background-color: #f5c507; 
 }
 
 .slider::-ms-fill-upper {  
-    background-color: #f5c506;
+    height: 12px;
+    background-color: #81712e;
+    opacity: 0.5;
 }
 
 .play-button {       
@@ -409,7 +441,7 @@ h1 {
     width: 27px;
     border: 0;
     outline: none;
-    background-color: rgb(96%, 77%, 3%, 0.37);    
+    background-color: rgba(96%, 77%, 3%, 0.37);    
 }   
 
 .play-button-arrow {   
